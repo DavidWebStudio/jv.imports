@@ -512,7 +512,7 @@ const PRODUCTS = [
     },
     {
     id:49,
-    name:"Yara Tours Perfume",
+    name:"Yara Tous Perfume",
     category:"Perfumes Árabes",
     image:"Yara_tours.jpeg",
     shortDescription:"Alegre e Tropical",
