@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f0f10" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>JV Imports — Perfumes Árabes e Importados Premium</title>
+  <meta name="description" content="Catálogo curado de perfumes árabes, body splash e importados originais. Fixação superior e envio para todo o Brasil." />
+  <meta property="og:title" content="JV Imports — Perfumaria de Luxo" />
+  <meta property="og:description" content="Perfumes árabes e importados originais. Catálogo exclusivo com envio para todo o Brasil." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="topbar">✈️ Enviamos para todo o Brasil com código de rastreio</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.jpeg" class="brand-logo-img" alt="JV Imports">
+        <div class="brand-text">
+          <span class="brand-name">JV IMPORTS</span>
+          <span class="brand-tag">Perfumaria de Luxo</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="container search-wrap">
+      <label class="search">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5" stroke-linecap="round"></path>
+        </svg>
+        <input id="searchInput" type="search" placeholder="Buscar fragrância…" aria-label="Buscar produto" autocomplete="off" />
+      </label>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <p class="eyebrow">Coleção Exclusiva 2026</p>
+    <h1 class="hero-title">
+      Produtos que <em>marcam</em> presença.
+    </h1>
+    <p class="hero-sub">
+      Perfumes árabes e importados originais, selecionados para quem entende
+      que uma fragrância é uma extensão do caráter.
+    </p>
+    <div class="gold-divider"></div>
+  </section>
+
+  <section class="filters-wrap">
+    <div class="container filters" id="filters">
+      <button class="filter-btn active" data-filter="Todos">Todos</button>
+      <button class="filter-btn" data-filter="Perfumes Árabes">Perfumes Árabes</button>
+      <button class="filter-btn" data-filter="Body Splash">Body Splash</button>
+      <button class="filter-btn" data-filter="Cremes">Cremes</button>
+    </div>
+  </section>
+
+  <main class="container">
+    <div id="productGrid" class="grid"></div>
+    <p id="emptyState" class="empty" hidden>Nenhuma fragrância encontrada.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="gold-divider"></div>
+      <div class="footer-grid">
+        <div>
+          <div class="brand-name footer-brand">JV IMPORTS</div>
+          <p class="muted">Perfumaria árabe e importada selecionada para quem aprecia o extraordinário.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Atendimento</h4>
+          <p class="muted">WhatsApp: (48) 99672-1558</p>
+          <p class="muted">Envio para todo o Brasil</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Siga-nos</h4>
+          <a class="footer-link" href="https://www.instagram.com/jv.imports.br" target="_blank" rel="noopener">@jv.imports.br</a>
+        </div>
+      </div>
+      <p class="copy">© <span id="year"></span> JV Imports. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
