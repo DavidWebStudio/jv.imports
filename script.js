@@ -34,6 +34,16 @@ const PRODUCTS = [
     longDescription:"Hawas Eclat é uma fragrância floral sofisticada, moderna e marcante, ideal para quem busca elegância e presença.",
     benefits: BENEFITS["Perfumes Árabes"],
     },
+   
+    {
+    id:-1,
+    name:"Bidaya",
+    category:"Perfumes Árabes",
+    image:"bidaya.jpeg",
+    shortDescription:"Fragrância crítica, frutada e especiada",
+    longDescription:"Abre com notas vibrantes de cítricos (laranja, limão e bergamota) combinadas com gengibre. No corpo, traz uma pera suculenta envolvida por toques quentes de canela e especiaria.",
+    benefits: BENEFITS["Perfumes Árabes"],
+    },
     
     {
     id:2,
