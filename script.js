@@ -603,6 +603,23 @@ function buildWhatsAppLink(productName) {
 /* =========================================================
    PÁGINA INICIAL (index.html)
    ========================================================= */
+
+
+  // Busca em tempo real
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = e.target.value;
+    render();
+  });
+
+  render();
+}
+
+/* =========================================================
+   PÁGINA DE PRODUTO (produto.html)
+   ========================================================= */
+/* =========================================================
+   PÁGINA INICIAL (index.html)
+   ========================================================= */
 function initCatalogPage() {
   const grid        = document.getElementById("productGrid");
   const emptyState  = document.getElementById("emptyState");
@@ -622,7 +639,9 @@ function initCatalogPage() {
     });
 
     grid.innerHTML = list.map(cardTemplate).join("");
-    emptyState.hidden = list.length > 0;
+    if (emptyState) {
+      emptyState.hidden = list.length > 0;
+    }
   }
 
   function cardTemplate(p) {
@@ -645,7 +664,7 @@ function initCatalogPage() {
     `;
   }
 
-  // Filtros
+  // Filtros por Categoria
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       filterBtns.forEach((b) => b.classList.remove("active"));
@@ -654,20 +673,18 @@ function initCatalogPage() {
       render();
     });
   });
-}
 
   // Busca em tempo real
-  searchInput.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    render();
-  });
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      render();
+    });
+  }
 
+  // Renderização inicial dos produtos
   render();
 }
-
-/* =========================================================
-   PÁGINA DE PRODUTO (produto.html)
-   ========================================================= */
 function initProductPage() {
   const titleEl = document.getElementById("productName");
   if (!titleEl) return; // não estamos na página de produto
