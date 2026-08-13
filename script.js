@@ -612,7 +612,7 @@ function buildWhatsAppLink(productName) {
   });
 
   render();
-}
+};
 
 /* =========================================================
    PÁGINA DE PRODUTO (produto.html)
