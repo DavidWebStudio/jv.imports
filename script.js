@@ -454,6 +454,7 @@ const PRODUCTS = [
   },
 
 
+
   /* =========================================================
      BODY SPLASH (IDs: 151 - 300)
      ========================================================= */
@@ -521,6 +522,16 @@ const PRODUCTS = [
     longDescription: "Uma bruma suave e iluminada com deliciosos acordes de mel e florais radiantes para perfumação prática diária.",
     benefits: BENEFITS["Body Splash"],
   },
+  {
+    id: 158,
+    name: "Asad Lattafa Air Freshener / Body Splash",
+    category: "Body Splash",
+    image: "asad_splash.jpeg",
+    shortDescription: "Masculino marcante e refrescante.",
+    longDescription: "A fragrância icônica e imponente de Asad em formato de névoa perfumada, ideal para uso diário e refrescância prolongada.",
+    benefits: BENEFITS["Body Splash"],
+  },
+   
 
 
   /* =========================================================
