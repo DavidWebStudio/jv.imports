@@ -1,6 +1,6 @@
 /* =========================================================
    JV IMPORTS — script.js
-   - Catálogo mockado de 36 produtos
+   - Catálogo de produtos
    - Filtro por categoria + busca em tempo real (index)
    - Renderização dinâmica da página de produto (produto.html)
    - Geração de link do WhatsApp com mensagem pré-preenchida
@@ -197,7 +197,7 @@ const PRODUCTS = [
     category: "Perfumes Árabes",
     image: "regentcollection_perfumesarabes.webp",
     shortDescription: "Elegante e sofisticado.",
-    longDescription: "Fragrância masculina refinada criada para homens que valorizam o luxo discreto, a sobriedade e um aroma duradouro.",
+    longDescription: "Fragrância masculina refinada criada para homens que valorizan o luxo discreto, a sobriedade e um aroma duradouro.",
     benefits: BENEFITS["Perfumes Árabes"],
   },
   {
@@ -453,8 +453,6 @@ const PRODUCTS = [
     benefits: BENEFITS["Perfumes Árabes"],
   },
 
-
-
   /* =========================================================
      BODY SPLASH (IDs: 151 - 300)
      ========================================================= */
@@ -531,8 +529,6 @@ const PRODUCTS = [
     longDescription: "A fragrância icônica e imponente de Asad em formato de névoa perfumada, ideal para uso diário e refrescância prolongada.",
     benefits: BENEFITS["Body Splash"],
   },
-   
-
 
   /* =========================================================
      CREMES (IDs: 301 - 450)
@@ -603,27 +599,12 @@ function buildWhatsAppLink(productName) {
 /* =========================================================
    PÁGINA INICIAL (index.html)
    ========================================================= */
-
-
-  // Busca em tempo real
-  searchInput.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    render();
-  });
-
-  render();
-
-/* =========================================================
-   PÁGINA DE PRODUTO (produto.html)
-   ========================================================= */
-/* =========================================================
-   PÁGINA INICIAL (index.html)
-   ========================================================= */
 function initCatalogPage() {
   const grid        = document.getElementById("productGrid");
   const emptyState  = document.getElementById("emptyState");
   const searchInput = document.getElementById("searchInput");
   const filterBtns  = document.querySelectorAll(".filter-btn");
+  
   if (!grid) return; // não estamos na página principal
 
   let activeFilter = "Todos";
@@ -684,6 +665,10 @@ function initCatalogPage() {
   // Renderização inicial dos produtos
   render();
 }
+
+/* =========================================================
+   PÁGINA DE PRODUTO (produto.html)
+   ========================================================= */
 function initProductPage() {
   const titleEl = document.getElementById("productName");
   if (!titleEl) return; // não estamos na página de produto
@@ -694,29 +679,42 @@ function initProductPage() {
 
   if (!product) {
     titleEl.textContent = "Produto não encontrado";
-    document.getElementById("productDescription").textContent =
-      "O produto solicitado não está disponível. Volte ao catálogo para escolher outra fragrância.";
+    const descEl = document.getElementById("productDescription");
+    if (descEl) {
+      descEl.textContent = "O produto solicitado não está disponível. Volte ao catálogo para escolher outra fragrância.";
+    }
     return;
   }
 
-  // Preenche dados
+  // Preenche dados com checagens de segurança
   document.title = `${product.name} — JV Imports`;
   titleEl.textContent = product.name;
-  document.getElementById("productDescription").textContent = product.longDescription;
-  document.getElementById("productBadge").textContent = product.category;
 
-  const img = document.getElementById("productImage");
-  img.src = product.image;
-  img.alt = product.name;
+  const descEl = document.getElementById("productDescription");
+  if (descEl) descEl.textContent = product.longDescription;
+
+  const badgeEl = document.getElementById("productBadge");
+  if (badgeEl) badgeEl.textContent = product.category;
+
+  const imgEl = document.getElementById("productImage");
+  if (imgEl) {
+    imgEl.src = product.image;
+    imgEl.alt = product.name;
+  }
 
   // Benefícios
   const benefitsList = document.getElementById("benefitsList");
-  benefitsList.innerHTML = product.benefits.map((b) => `<li>${b}</li>`).join("");
+  if (benefitsList && product.benefits) {
+    benefitsList.innerHTML = product.benefits.map((b) => `<li>${b}</li>`).join("");
+  }
 
   // Link do WhatsApp (desktop + mobile)
   const waLink = buildWhatsAppLink(product.name);
-  document.getElementById("whatsappBtn").href = waLink;
-  document.getElementById("whatsappBtnMobile").href = waLink;
+  const btnDesktop = document.getElementById("whatsappBtn");
+  const btnMobile  = document.getElementById("whatsappBtnMobile");
+
+  if (btnDesktop) btnDesktop.href = waLink;
+  if (btnMobile)  btnMobile.href  = waLink;
 }
 
 /* =========================================================
