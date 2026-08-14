@@ -40,7 +40,7 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: "Bidaya",
+    name: "Maktub Gold",
     category: "Perfumes Árabes",
     image: "bidaya.jpeg",
     shortDescription: "Fragrância cítrica, frutada e especiada.",
