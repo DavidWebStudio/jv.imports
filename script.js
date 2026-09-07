@@ -504,7 +504,7 @@ const PRODUCTS = [
   },
   {
     id: 156,
-    name: "Eclaire Air Freshener / Body Splash",
+    name: "Eclaire Aromatizador de Ar",
     category: "Body Splash",
     image: "eclaire_splash.jpeg",
     shortDescription: "Doce cremoso e envolvente.",
@@ -513,7 +513,7 @@ const PRODUCTS = [
   },
   {
     id: 157,
-    name: "Atheeri Air Freshener / Body Splash",
+    name: "Atheeri Aromatizador de Ar",
     category: "Body Splash",
     image: "atheeri_splash.jpeg",
     shortDescription: "Mel e toques dourados refrescantes.",
@@ -522,7 +522,7 @@ const PRODUCTS = [
   },
   {
     id: 158,
-    name: "Asad Lattafa Air Freshener / Body Splash",
+    name: "Asad Lattafa Aromatizador de Ar",
     category: "Body Splash",
     image: "asad_splash.jpeg",
     shortDescription: "Masculino marcante e refrescante.",
