@@ -452,6 +452,33 @@ const PRODUCTS = [
     longDescription: "Perfeito para homens ativos, une tangerina fresca, hortelã, pimenta e fava tonka com excelente fixação.",
     benefits: BENEFITS["Perfumes Árabes"],
   },
+  {
+    id: 48,
+    name: "Basir",
+    category: "Perfumes Árabes",
+    image: "basir_perf.jpeg",
+    shortDescription: "Luxo e mistério oriental.",
+    longDescription: "Fragrância marcante e sofisticada, ideal para quem busca presença única com toques orientais inesquecíveis.",
+    benefits: BENEFITS["Perfumes Árabes"],
+  },
+  {
+    id: 49,
+    name: "Fada Gold",
+    category: "Perfumes Árabes",
+    image: "fadagold_perf.jpeg",
+    shortDescription: "Elegância dourada e marcante.",
+    longDescription: "Perfume opulento e envolvente, perfeito para destacar sua personalidade em ocasiões muito especiais.",
+    benefits: BENEFITS["Perfumes Árabes"],
+  },
+  {
+    id: 50,
+    name: "Sex on the Rocks",
+    category: "Perfumes Árabes",
+    image: "sexon_perf.jpeg",
+    shortDescription: "Ousadia, frescor e sedução.",
+    longDescription: "Fragrância vibrante e sensual, criada para quem deseja se destacar com aroma moderno e envolvente.",
+    benefits: BENEFITS["Perfumes Árabes"],
+  },
 
   /* =========================================================
      BODY SPLASH (IDs: 151 - 300)
@@ -529,6 +556,33 @@ const PRODUCTS = [
     longDescription: "A fragrância icônica e imponente de Asad em formato de névoa perfumada, ideal para uso diário e refrescância prolongada.",
     benefits: BENEFITS["Body Splash"],
   },
+  {
+    id: 159,
+    name: "Victoria’s Secret Vanilla",
+    category: "Body Splash",
+    image: "victoriasecr_body.jpeg",
+    shortDescription: "Achechego e baunilha marcante.",
+    longDescription: "Spray corporal leve e adocicado, perfeito para perfumar a pele com o conforto suave da baunilha.",
+    benefits: BENEFITS["Body Splash"],
+  },
+  {
+    id: 160,
+    name: "Victoria’s Secret Pure Seduction",
+    category: "Body Splash",
+    image: "victoriapure_body.jpeg",
+    shortDescription: "Frutado, alegre e sedutor.",
+    longDescription: "SFragrância radiante com notas frutadas marcantes, ideal para refrescar e perfumar seu dia a dia.",
+    benefits: BENEFITS["Body Splash"],
+  },
+  {
+    id: 161,
+    name: "Victoria’s Secret Velvet Petals",
+    category: "Body Splash",
+    image: "victoriavelvet_body.jpeg",
+    shortDescription: "Floral aveludado e suave.",
+    longDescription: "Névoa leve com toque floral e gourmand, garantindo frescor elegante durante todo o dia.",
+    benefits: BENEFITS["Body Splash"],
+  },
 
   /* =========================================================
      CREMES (IDs: 301 - 450)
@@ -587,7 +641,35 @@ const PRODUCTS = [
     shortDescription: "Intenso, moderno e marcante.",
     longDescription: "Proporciona toque macio e proteção contra o ressecamento da pele, acompanhado de uma fragrância masculina marcante.",
     benefits: BENEFITS["Cremes"],
-  }
+  },
+  {
+    id: 307,
+    name: "Creme Victoria’s Secret Velvet Petals",
+    category: "Cremes",
+    image: "pureseduction_creme.jpeg",
+    shortDescription: "Hidratação macia e floral.",
+    longDescription: "Creme hidratante de rápida absorção que deixa a pele aveludada, nutrida e delicadamente perfumada.",
+    benefits: BENEFITS["Cremes"],
+  },
+  {
+    id: 308,
+    name: "Creme Victoria’s Secret Pure Seduction",
+    category: "Cremes",
+    image: "victoriasecret_creme.jpeg",
+    shortDescription: "Pele macia e perfumada.",
+    longDescription: "Hidratante corporal envolvente que combina nutrição intensa com um aroma frutado e sedutor duradouro.",
+    benefits: BENEFITS["Cremes"],
+  },
+  {
+    id: 309,
+    name: "Creme Victoria’s Secret Vanilla",
+    category: "Cremes",
+    image: "vanillasecret_creme.jpeg",
+    shortDescription: "Toque aveludado de baunilha.",
+    longDescription: "Creme enriquecido para hidratar profundamente, envolvendo o corpo em uma fragrância aconchegante de baunilha.",
+    benefits: BENEFITS["Cremes"],
+  },
+
 
 ];
 
