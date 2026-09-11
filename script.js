@@ -1,11 +1,3 @@
-/* =========================================================
-   JV IMPORTS — script.js
-   - Catálogo de produtos
-   - Filtro por categoria + busca em tempo real (index)
-   - Renderização dinâmica da página de produto (produto.html)
-   - Geração de link do WhatsApp com mensagem pré-preenchida
-   ========================================================= */
-
 const WHATSAPP_NUMBER = "5548996721558";
 
 /** Define a categoria pelo intervalo do ID */
@@ -22,7 +14,7 @@ const BENEFITS = {
   "Cremes":          ["Fórmula exclusiva", "Acabamento aveludado", "Combo curado", "Original Importado"],
 };
 
-/** Lista mockada de produtos com IDs categorizados */
+// Lista de produtos com IDs categorizados 
 const PRODUCTS = [
 
   /* =========================================================
